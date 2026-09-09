@@ -31,13 +31,13 @@ Use this section for:
 
 ## Current lane posture
 
-- strict-lane reference:
-  `docs/specs/001-g09-lane-first-strict-adoption.md`
+- strict-lane reference: none (the closed `g09` lane spec is archived at
+  `docs/specs/archive/001-g09-lane-first-strict-adoption.md`)
 - most recent closeout:
   `docs/logs/2026-08/31-g11-003-northstar-agents-rust-audit-closeout.md`
-  (card `008`; no ready card follows it)
-- `g09` is complete; newer work should not treat the recent `g09` log chain as
-  live execution state
+  (`g11.003`; no ready task follows it)
+- `g09` and `g10` are archived; newer work should not treat their log chains
+  as live execution state
 
 ## Recent Baseline Evidence
 

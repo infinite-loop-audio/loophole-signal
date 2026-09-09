@@ -186,7 +186,7 @@ memory alone.
 
 ## Working Rule
 
-Roadmap milestones should cite the narrowest governing contract family they
+Roadmap tasks should cite the narrowest governing contract family they
 depend on, then add a new contract only when the intended seam is not already
 frozen elsewhere in this index.
 
@@ -194,5 +194,6 @@ frozen elsewhere in this index.
 
 Keep Contract `084` closed. Contract `085` admits public continuous
 `4x..16x` Dream through one owner, with no same-character router. Public
-Cyclic remains exact `2x`, `4x`, and `8x`; Cloud remains closed. Execute
-`g10.034` Batch 34.3 only as one isolated continuous Cyclic candidate.
+Cyclic remains exact `2x`, `4x`, and `8x`; Cloud remains closed. `g10.034` is
+complete and archived at `docs/roadmaps/archive/g10.md`; do not re-execute
+its batches.

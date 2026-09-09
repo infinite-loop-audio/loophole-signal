@@ -35,7 +35,7 @@ Use this section for:
 - trust-edge adapter boundaries
 - generic library invariants
 
-Keep milestone sequencing in `roadmaps/`.
+Keep generation task sequencing in `roadmaps/`.
 
 ## Active Entry Points
 

@@ -49,5 +49,6 @@ UI shells.
 
 ## Next Task
 
-Use this contract while executing
-`docs/roadmaps/g09/batch-cards/044-g09-015-real-plugin-discovery-gap-burn-down.md`.
+`g09.015` is complete; the generation is archived at
+`docs/roadmaps/archive/g09.md`. Apply this contract to operator-visible demo
+proof only when a new task names it.

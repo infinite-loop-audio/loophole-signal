@@ -104,7 +104,7 @@ jump straight to the layer that matches your question.
 - [Strategic Runway](./roadmaps/strategic-runway.md) — long-horizon sequencing
   after the `g10` stretch audit.
 - [Active Generation g11](./roadmaps/g11/README.md) — current queue.
-- [Generation g10](./roadmaps/g10/README.md) — closing generation; stretch audit
+- [Generation g10](./roadmaps/archive/g10.md) — archived; stretch audit
   complete.
 - [Generation Index](./roadmaps/generation-index.md) — the history of
   generations `g01`…`g11`.

@@ -113,3 +113,13 @@ they hit a solvable hurdle; they do not stop the current task to fix one.
 - Impact: owning a fourth format looks like a product regression.
 - Fix: assert owned formats by record instead of a magic length.
 - Surface: `crates/signal-host-local/tests/public_host_edge_cross_adapter_parity.rs`
+
+### [ ] Contract planning-authority pointers rot silently after generation compaction — 2026-09-09
+- Friction: lifecycle compaction deletes `docs/roadmaps/gNN/` trees, but live
+  contracts cite task files as "Planning authority"; nothing flags the
+  dangling pointers until a links check or human notices.
+- Impact: five stale pointers in Contracts `046`/`085` plus one in `079`
+  survived `g10` closeout into this migration.
+- Fix: add a compaction-step checklist item (or link-check scope) for
+  `Planning authority:` lines naming generation paths.
+- Surface: `docs/contracts/`, `effigy docs check links`

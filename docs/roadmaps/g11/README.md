@@ -1,8 +1,8 @@
-# g11 Milestones
+# g11 Tasks
 
 Status: `g11.001` complete; `g11.002` complete; `g11.003` complete and merged
 through PR `#18` after one review wave
-Updated: 2026-09-01
+Updated: 2026-09-09
 
 ## At a glance
 
@@ -11,12 +11,12 @@ Updated: 2026-09-01
 - Plugin hosting baseline work is **not** in scope — CLAP, VST3, AU, and LV2
   hosting already ship through adapter crates, `signal-plugin-sandbox`, and
   `signal-plugin-bridge`. See Contract `072`.
-- First milestone: **`g11.001` production host-assembly wiring** — complete.
-- Second milestone: **`g11.002` SharedSandbox tier** — complete. Contract `014`
+- First task: **`g11.001` production host-assembly wiring** — complete.
+- Second task: **`g11.002` SharedSandbox tier** — complete. Contract `014`
   owns semantics. v1 grouping is plugin type identity. Map:
   `docs/architecture/shared-sandbox-multiplexing.md`.
-- Maintenance milestone: **`g11.003` Northstar instruction and Rust quality
-  audit** — card `008` complete and merged through PR `#18`; no product behavior
+- Maintenance task: **`g11.003` Northstar instruction and Rust quality
+  audit** — complete and merged through PR `#18`; no product behavior
   or new generation.
 
 ## Why this generation matters now
@@ -36,16 +36,24 @@ Updated: 2026-09-01
 Do not reopen stretch, Automatic, or RealtimePreview adoption work from this
 generation.
 
-## Milestone Map
+## Task Map
 
 - `g11.001` `complete`
-  - production host-assembly wiring; Batches 1.1–1.4 closed
+  - production host-assembly wiring
+  (`001-production-host-assembly-wiring.md`)
 - `g11.002` `complete`
-  - SharedSandbox tier. Batches 2.0–2.3 closed.
+  - SharedSandbox tier
+  (`002-shared-sandbox-tier.md`)
 - `g11.003` `complete`
-  - repository-scope AGENTS and Rust audit; Batch 3.1 / card `008` closed.
+  - repository-scope AGENTS and Rust audit, merged through PR `#18`.
     Audit `signal-g11-003-repository-audit`, 14 units over 28 crates, 89
     recorder-authorized repairs, 8 unsafe findings left report-only.
+  (`003-northstar-instruction-and-rust-quality-audit.md`)
+
+Earlier milestone wrappers and nested batch cards were absorbed into these
+three tasks by the flattened-task migration; the generation README is the
+single roadmap and frontier, and each `g11.NNN` file above is the sole
+executable planning unit for its task.
 
 ## Working Rule
 
@@ -59,5 +67,5 @@ generation.
 
 ## Next Task
 
-Return to operator planning or backlog selection. `g11` has no ready card; do
+Return to operator planning or backlog selection. `g11` has no ready task; do
 not open `g12` or infer a product backlog pull from this lane.

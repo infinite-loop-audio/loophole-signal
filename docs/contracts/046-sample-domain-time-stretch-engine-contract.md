@@ -243,7 +243,7 @@ may only become `CallbackSafeStreaming`/`SourceProjected` after focused tests
 prove source advance, output position, bounded input demand, underrun/fill
 policy, latency, and no-allocation behavior together.
 
-Planning authority: `docs/roadmaps/g10/028-realtime-preview-source-fill-contract.md`.
+Planning authority: `docs/roadmaps/archive/g10.md`.
 
 ## 2026-08-05 RealtimePreview Callback Gate Satisfied
 
@@ -401,7 +401,7 @@ remains unmodified pending a different algorithm class. Any selector must later
 share its decision across linked stereo.
 
 Planning authority:
-`docs/roadmaps/g10/030-stretch-consolidation-and-completion.md`.
+`docs/roadmaps/archive/g10.md`.
 
 ## Historical 2026-07-10 OfflineHighQuality Structural Hybrid Addendum
 
@@ -508,7 +508,7 @@ no runtime or public Rust surface until separately promoted.
 
 ## 2026-07-27 Transparent Renderer Defect Correction Addendum
 
-Planning authority: `docs/roadmaps/g10/036-transparent-stretch-correctness-recovery.md`.
+Planning authority: `docs/roadmaps/archive/g10.md`.
 Evidence: `docs/logs/2026-07/27-g10-036-stretch-audit-intake.md`,
 `docs/logs/2026-07/27-g10-036-defect-authority.md`.
 
@@ -683,7 +683,7 @@ Under the measured overlap law the audible window is narrow. The classes are:
 
 ## 2026-07-27 Stretch Cache Identity Addendum
 
-Planning authority: `docs/roadmaps/g10/037-stretch-cache-identity-completeness.md`.
+Planning authority: `docs/roadmaps/archive/g10.md`.
 Evidence: `docs/logs/2026-07/27-g10-037-identity-gap-audit.md`.
 
 The 2026-07-19 promotion evidence list named the cache identity fields as
@@ -769,7 +769,7 @@ holds.
 
 ## 2026-07-27 Resumable Offline Render Addendum
 
-Planning authority: `docs/roadmaps/g10/039-resumable-offline-stretch-render.md`.
+Planning authority: `docs/roadmaps/archive/g10.md`.
 Evidence: `docs/logs/2026-07/27-g10-039-state-boundary-audit.md`.
 
 ### Renderer state that resets at every boundary

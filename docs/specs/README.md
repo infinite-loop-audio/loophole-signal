@@ -27,20 +27,20 @@ surface that can attach to one active generation at a time.
   work
 - in the strict lane, a bare `continue` should resolve through the previous
   closeout's `Next Task`
-- that `Next Task` should normally point at the current ready card or an
+- that `Next Task` should normally point at the current ready task or an
   explicit stop/reassessment step
-- if no current ready card exists, do not infer the next code task from memory;
+- if no current ready task exists, do not infer the next code task from memory;
   re-enter planning first
 
 ## Active Entry Points
 
 - no active strict lane currently
-- `001-g09-lane-first-strict-adoption.md` remains as the completed reference
+- `archive/001-g09-lane-first-strict-adoption.md` is the completed reference
   for the closed `g09` lane
-- there is no current ready batch card
+- there is no current ready task
 
 ## Next Task
 
-Do not add a new ready card here unless a strict lane is explicitly reopened.
+Do not add a new ready task here unless a strict lane is explicitly reopened.
 Until then, treat this folder as completed reference rather than live
 execution authority.

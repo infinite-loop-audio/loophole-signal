@@ -1,4 +1,4 @@
-# 002 - SharedSandbox Tier
+# g11.002 - SharedSandbox Tier
 
 Status: complete
 Owner: core-product
@@ -7,6 +7,15 @@ Updated: 2026-08-17
 Depends on: g11.001
 Vision tags: `PLUGINS`, `SANDBOX`, `RECOVERY`
 Governing refs: `docs/contracts/014-plugin-isolation-policy-transport-rebind-and-shared-sandbox-continuity-contract.md`, `docs/contracts/072-real-plugin-hosting-discovery-and-sandbox-execution-contract.md`, `docs/architecture/shared-sandbox-multiplexing.md`, `docs/architecture/production-host-assembly-integration.md`
+
+## Outcome
+
+`SharedSandbox` shipped: one broker child hosts many plugin instances that
+share a grouping key (v1 grouping is plugin type identity), reusing
+`ShmPluginProcessor` per member lease with no new audio-thread backend.
+Products with several compatible plugin instances under one sandbox boundary
+no longer pay one child process per plugin when runtime placement selects
+`SharedSandbox`.
 
 ## Problem
 
@@ -17,16 +26,11 @@ Signal models three isolation tiers in `PluginIsolationTier`:
 - `SharedSandbox` — one broker child, many plugin instances that share a
   grouping key
 
-Products that want several compatible plugin instances under one sandbox
-boundary no longer pay one child process per plugin when runtime placement
-selects SharedSandbox.
-
 ## Research posture
 
 **No separate research lane is required.** Contract `014` owns semantics.
-Batch 2.0 froze the multiplexing map at
-`docs/architecture/shared-sandbox-multiplexing.md`. Implementation and proof
-landed in Batches 2.1–2.3.
+The multiplexing map is frozen at
+`docs/architecture/shared-sandbox-multiplexing.md`.
 
 ## Goals
 
@@ -44,48 +48,29 @@ landed in Batches 2.1–2.3.
 - [x] vendor certification matrices
 - [x] vendor/format grouping (v1 grouping is plugin identity only)
 
-## Execution Plan
+## Delivery record
 
-### Batch 2.0 - Multiplexing Design Note (docs-only)
+Absorbed the former milestone batches and execution cards `004`–`007`
+(multiplexing design note, broker multiplexing, host-assembly integration,
+continuity proof and closeout) during the flattened-task migration; no scope
+changed. Operator product pull 2026-08-17.
 
-Status: complete
-
-Product pull: operator, 2026-08-17. Grouping: same plugin type identity.
-
-- [x] document broker multiplexing against Contract `014`
-- [x] name proof surfaces and stop conditions
-- [x] confirm no contract gap requires a new research brief
-
-Design note: `docs/architecture/shared-sandbox-multiplexing.md`.
-
-### Batch 2.1 - Broker Multiplexing Implementation
-
-Status: complete
-
-- [x] extend sandbox broker to host multiple plugin instances in one child
-- [x] keep DedicatedSandbox single-slot commands unchanged
-- [x] preserve crash attribution per Contract `014`
-
-Card: `docs/roadmaps/g11/batch-cards/005-g11-002-broker-multiplexing.md`.
-
-### Batch 2.2 - Host Assembly Integration
-
-Status: complete
-
-- [x] route `PluginIsolationTier::SharedSandbox` through the `g11.001` factory
-- [x] attach `ShmPluginProcessor` from each member lease
-- [x] record runtime grouping key and member count
-
-Card: `docs/roadmaps/g11/batch-cards/006-g11-002-host-assembly-integration.md`.
-
-### Batch 2.3 - Continuity Proof And Closeout
-
-Status: complete
-
-- [x] prove shared-boundary degradation and terminal outcomes on runtime receipts
-- [x] close milestone and update Contract `072` remaining-gaps table
-
-Card: `docs/roadmaps/g11/batch-cards/007-g11-002-continuity-proof-and-closeout.md`.
+- Multiplexing design note (docs-only): broker multiplexing documented
+  against Contract `014`; proof surfaces and stop conditions named; no new
+  contract needed.
+- Broker multiplexing: sandbox broker extended to host multiple plugin
+  instances in one child (`load-plugin-instance`, `activate-instance`,
+  `unload-plugin-instance`; omitted `instance_id` still means `sandbox_id`);
+  DedicatedSandbox single-slot behavior unchanged; crash attribution per
+  Contract `014` preserved.
+- Host-assembly integration: `PluginIsolationTier::SharedSandbox` routed
+  through the `g11.001` factory — find or spawn the broker session for
+  grouping key `plugin:{plugin_type_id}`, allocate a unique `instance_id`,
+  return two `ShmPluginProcessor` handles for two prepares of the same type.
+- Continuity proof and closeout: Contract `014` shared-boundary blast radius
+  proved on runtime receipts (child death and terminal outcomes visible for
+  every member); Contract `072` remaining-gaps table updated; SharedSandbox
+  no longer described as unimplemented.
 
 ## Acceptance Criteria
 
@@ -94,7 +79,7 @@ Card: `docs/roadmaps/g11/batch-cards/007-g11-002-continuity-proof-and-closeout.m
   for all member instances
 - [x] DedicatedSandbox behavior remains unchanged for existing paths
 - [x] docs no longer describe SharedSandbox as "unimplemented" without pointing
-  at this milestone and Contract `014`
+  at this task and Contract `014`
 
 ## Risks and Mitigations
 
@@ -106,14 +91,20 @@ Card: `docs/roadmaps/g11/batch-cards/007-g11-002-continuity-proof-and-closeout.m
 - Mitigation: require the same real `process()` and transport proof bar as
   DedicatedSandbox.
 
-## Evidence Requirements
+## Evidence
 
-- [x] Batch 2.0 log
-- [x] one log per remaining completed batch
-- [x] continuity proof references Contract `014` rules explicitly
-- [x] milestone closeout updates `docs/roadmaps/g11/README.md`
+- Dispatch handoff: `docs/handoffs/20260817-185000-g11-002-shared-sandbox.md`
+  (closed; retained as history, not authority).
+- Batch logs: `docs/logs/2026-08/17-g11-002-batch-2-0-multiplexing-design-note.md`
+  through `17-g11-002-batch-2-3-continuity-proof-and-closeout.md`.
+- Continuity proof references Contract `014` rules explicitly.
+
+## Stop Conditions
+
+- planning gaps, contract contradictions, or failed evidence gates stop the
+  task; none remain open.
 
 ## Next Task
 
-Stop for operator review of the `g11.002` PR. Do not start a follow-on
-generation from this milestone.
+`g11.002` closed. Stop for operator review; do not start a follow-on
+generation from this task.

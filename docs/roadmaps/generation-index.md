@@ -1,16 +1,17 @@
 # Roadmap Generation Index
 
 Status: active
-Updated: 2026-08-17
+Updated: 2026-09-09
 
 ## Current generation posture
 
-- `g10` is the closing generation. Its stretch audit is complete. Integration
-  work opens in `g11`.
+- `g10` is archived at `docs/roadmaps/archive/g10.md`. Its stretch audit is
+  complete.
 - `g11` is the active generation. Its front door is
-  `docs/roadmaps/g11/README.md`. `g11.001` production host-assembly wiring and
-  `g11.002` SharedSandbox are complete. `g11.003` is the active bounded
-  instruction and Rust quality audit maintenance lane.
+  `docs/roadmaps/g11/README.md`. `g11.001` production host-assembly wiring,
+  `g11.002` SharedSandbox, and `g11.003` instruction and Rust quality audit
+  are complete; there is no ready task.
+- `g01`–`g09` are archived under `docs/roadmaps/archive/`.
 
 Historical `g10` stretch-lane narrative:
 
@@ -203,8 +204,8 @@ Historical `g10` stretch-lane narrative:
 | `g06` | 2026-03-13 | Continue beyond reusable-boundary closeout with runtime recovery depth, instrumentation, feature breadth, and Loophole-facing runtime evidence | Closed on 2026-03-16 after recovery/resumability, profiling, VST3/AU, MIDI/event depth, hardware/external-I/O, media services, integrated acceptance, bounded soak, and generation-closeout promotion work landed |
 | `g07` | 2026-03-13 | Seed the post-`g06` feature-expansion queue around routing or multichannel depth, Linux-native breadth, control-surface substrate, and fuller time-stretch capability | Closed on 2026-03-19 after multichannel or spatial execution, LV2 and Linux backends, external MIDI/control surfaces, sample-domain stretch, integrated acceptance, and generation-closeout promotion work landed |
 | `g08` | 2026-03-19 | Continue beyond bounded feature-expansion closure with live Linux backend ownership, richer plugin or device protocol depth, immersive routing, and workflow-adjacent runtime services | Closed on 2026-03-22 after live Linux ownership, LV2 or plugin protocol depth, immersive render breadth, device-protocol substrate, preview workflows, grouped acceptance lanes, integrated acceptance, and final generation-closeout work landed |
-| `g10` | 2026-06-11 | Turn the 2026-06-11 deep audit into a remediation program: fix the real audio path, demolish simulated/narration mass (~70-80k LoC), consolidate hygiene, defer rebuilds to demand | Stretch audit complete; generation closeout in progress; integration work moves to `g11` |
-| `g11` | 2026-08-17 | Post-stretch integration generation: production host-assembly wiring and SharedSandbox tier | Active generation; `g11.001` and `g11.002` complete; `g11.003` instruction and Rust quality audit active |
+| `g10` | 2026-06-11 | Turn the 2026-06-11 deep audit into a remediation program: fix the real audio path, demolish simulated/narration mass (~70-80k LoC), consolidate hygiene, defer rebuilds to demand | Archived at `docs/roadmaps/archive/g10.md` on 2026-09-09 (flattened-task migration); stretch audit complete; `g10.017` gate rehomed to backlog device depth |
+| `g11` | 2026-08-17 | Post-stretch integration generation: production host-assembly wiring and SharedSandbox tier | Active generation; `g11.001`, `g11.002`, and `g11.003` complete; no ready task |
 | `g09` | 2026-04-08 | Turn the audit findings into a contract-backed realization, hardening, and interactive-proof program | Closed on 2026-04-11 after plugin and backend realization, production-readiness gating, and operator-visible demo proof landed |
 
 ## Rollover policy
@@ -230,6 +231,6 @@ planning and operator target selection; do not treat it as a ready card.
 ## Next Task
 
 Use `docs/roadmaps/g11/README.md` as the current active-generation front door.
-`g11.001` and `g11.002` are complete. Stop for operator selection of the next
-Signal-only backlog pull. Do not start a follow-on generation. Linux CLAP
-filesystem discovery (`086`) shipped 2026-08-21. Do not open `g12`.
+`g11.001`, `g11.002`, and `g11.003` are complete. Stop for operator selection
+of the next Signal-only backlog pull. Do not start a follow-on generation.
+Linux CLAP filesystem discovery (`086`) shipped 2026-08-21. Do not open `g12`.
