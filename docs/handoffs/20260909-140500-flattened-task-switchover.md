@@ -4,7 +4,7 @@ title: "Flatten Northstar tasks and compact historic generations in signal"
 handoff_mode: worker-pr-loop
 worker_mode: implementation
 dispatch_authority: orchestrator
-status: ready-to-launch
+status: complete
 base_required: pushed-main
 queue_dispatch: northstar-queue
 queue_approval: "The operator authorized Chatterbox on 2026-09-09 to orchestrate the flattened-task migration across projects without Orchestrator-tagged Paseo threads, and explicitly required Northstar Queue for dispatch."
@@ -118,3 +118,22 @@ retire only the queue-owned migration threads/workspace. Final report must give
 historic classifications, preservation manifest, old-to-new mapping, exact
 changes, validation/review evidence, retained exceptions, new frontier, and
 whether normal dispatch resumed.
+
+## Closeout
+
+Completed and merged through PR `#21` at
+`109d04531707326c74f4309821c25c28125dcbc3` after the accepted exact-head review
+in comment `5602676789`. The migration compacted safely closed `g01`–`g10`,
+flattened `g11.001` through `g11.003`, and preserved the historic evidence and
+dispositions described in the closeout log:
+`docs/logs/2026-09/09-flattened-task-migration-closeout.md`.
+
+Validation passed at the reviewed head: `effigy qa:docs`,
+`effigy qa:docs:links`, `effigy qa:docs:agent-defaults`,
+`effigy qa:northstar`, and `git diff --check`; CI run `34357365596` also passed.
+The review's three required findings were resolved. The pointer-rot PAPERCUTS
+entry and frozen historical terminology remain deliberate deferred limits.
+
+The active front doors agree: `g11` has no ready task. Preserve the existing
+next pointer to operator planning or backlog selection; normal dispatch has not
+resumed and no new generation is authorized by this lane.

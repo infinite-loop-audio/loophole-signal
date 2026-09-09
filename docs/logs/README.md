@@ -1,7 +1,7 @@
 # Logs
 
 Status: active
-Updated: 2026-07-25
+Updated: 2026-09-09
 
 ## Why this section matters now
 
@@ -34,13 +34,14 @@ Use this section for:
 - strict-lane reference: none (the closed `g09` lane spec is archived at
   `docs/specs/archive/001-g09-lane-first-strict-adoption.md`)
 - most recent closeout:
-  `docs/logs/2026-08/31-g11-003-northstar-agents-rust-audit-closeout.md`
-  (`g11.003`; no ready task follows it)
+  `docs/logs/2026-09/09-flattened-task-migration-closeout.md`
+  (Northstar task `9dbdc492`; no ready task follows it)
 - `g09` and `g10` are archived; newer work should not treat their log chains
   as live execution state
 
 ## Recent Baseline Evidence
 
+- [Flattened Northstar task migration closeout](./2026-09/09-flattened-task-migration-closeout.md)
 - [Inflatable Cookie product ownership migration](./2026-07/29-220846-inflatable-cookie-product-ownership-migration.md)
 - [g10.035 creative stretch closeout](./2026-07/25-g10-035-creative-stretch-closeout.md)
 

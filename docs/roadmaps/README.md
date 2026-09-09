@@ -1,7 +1,7 @@
 # Roadmaps
 
 Status: active (`g11`); `g10` stretch audit complete
-Updated: 2026-08-31
+Updated: 2026-09-09
 
 ## In plain words
 
@@ -28,6 +28,8 @@ Current state in one breath:
 - `g11.003` is complete and merged through PR `#18`: one repository-scope
   Northstar instruction and Rust quality audit over all 28 crates. It opened no
   product behavior and no new generation.
+- The flattened-task migration is complete and merged through PR `#21`; historic
+  generations are archived, `g11` is task-level only, and there is no ready task.
 
 The rest of this page is the batch-by-batch history behind that summary. It is
 the working evidence spine for automation — read it if you need detail, not
