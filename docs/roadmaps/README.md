@@ -30,6 +30,9 @@ Current state in one breath:
   product behavior and no new generation.
 - The flattened-task migration is complete and merged through PR `#21`; historic
   generations are archived, `g11` is task-level only, and there is no ready task.
+- The roadmap backlog is retired and merged through PR `#22`; the backlog
+  surface is deleted, deferred candidates live in `docs/triage/`, and there is
+  no ready task.
 
 The rest of this page is the batch-by-batch history behind that summary. It is
 the working evidence spine for automation — read it if you need detail, not

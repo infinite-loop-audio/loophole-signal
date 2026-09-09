@@ -1,11 +1,15 @@
 # Roadmap Backlog Retirement Closeout
 
-Status: complete (pending review and merge)
+Status: complete; merged through PR `#22` after one review wave
 Date: 2026-09-09
 Owner: core-product
 Task: `8f4cfe12-06cf-4028-b11e-a19428fdface`
 Handoff: `docs/handoffs/20260909-151020-retire-roadmap-backlog.md`
 Canonical authority: Northstar `retire-roadmap-backlog-prompt.md` (commit `b8ce1b0`, installed Northstar)
+Updated: 2026-09-09
+PR: `https://github.com/inflatable-cookie/signal/pull/22`
+Merged commit: `a0944037763b624ad0b0cd43dafe456479e8826f`
+Reviewed head: `f783a5da8f3de3a4ea27279690a22286470218cd` (review comment `5603511980`)
 
 ## Summary
 
@@ -37,8 +41,8 @@ product-pull bets and now points at the triage notes.
 
 ## Files changed and deleted
 
-Deleted: `docs/roadmaps/backlog/` (6 files: `README.md`,
-`backlog-item-template.md`, and the four `post-gNN` items above).
+Deleted: `docs/roadmaps/backlog/` (7 files: `README.md`,
+`backlog-item-template.md`, and the five `post-gNN` items above).
 
 Repointed or retuned from roadmap backlog to triage: `docs/roadmaps/README.md`,
 `docs/roadmaps/strategic-runway.md`, `docs/roadmaps/generation-index.md`,
@@ -71,7 +75,25 @@ Unchanged: `g11.001`, `g11.002`, and `g11.003` complete; no ready task; do
 not open `g12`. Deferred work waits in triage for operator-selected product
 pull.
 
+## Review and validation
+
+Independent exact-head approval: review comment `5603511980` at
+`f783a5da8f3de3a4ea27279690a22286470218cd` with no changes required.
+`effigy qa:docs` (incl. link check) and `effigy qa:northstar` passed;
+`git diff --check` clean; `find docs -type d -name backlog -print` returns
+nothing. The merge synchronized `main` at
+`a0944037763b624ad0b0cd43dafe456479e8826f`.
+
+## Deferred limits
+
+The review's two non-blocking notes stay accepted limits: archive roll-ups keep
+inline-code pointers to deleted backlog paths as provenance, and the canonical
+authority citation originates in the handoff. Retained historical exceptions
+above (archived roll-ups, historical logs, closed handoffs and task records,
+runtime-scheduler vocabulary, Soundcheck-owned references) are unchanged on
+purpose.
+
 ## Next Task
 
-Merge this PR through normal review, then synchronize `main` and retire the
-cleanup workspace via Northstar Queue.
+Return to operator planning or triage review. `g11` has no ready task; do not
+open `g12` or infer a product pull from triage without operator selection.

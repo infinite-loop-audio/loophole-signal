@@ -10,8 +10,8 @@ Updated: 2026-09-09
 - `g11` is the active generation. Its front door is
   `docs/roadmaps/g11/README.md`. `g11.001` production host-assembly wiring,
   `g11.002` SharedSandbox, and `g11.003` instruction and Rust quality audit
-  are complete; the flattened-task migration merged through PR `#21`; there is
-  no ready task.
+  are complete; the flattened-task migration merged through PR `#21` and the
+  roadmap backlog retired through PR `#22`; there is no ready task.
 - `g01`–`g09` are archived under `docs/roadmaps/archive/`.
 
 Historical `g10` stretch-lane narrative:

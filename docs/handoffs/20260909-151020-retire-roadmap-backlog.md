@@ -4,7 +4,7 @@ title: "Retire the roadmap backlog in signal"
 handoff_mode: worker-pr-loop
 worker_mode: implementation
 dispatch_authority: orchestrator
-status: ready-to-launch
+status: complete
 base_required: pushed-main
 queue_dispatch: northstar-queue
 queue_approval: "The operator authorized Chatterbox on 2026-09-09 to roll out the roadmap-backlog retirement across projects without Orchestrator-owned Paseo threads, using Northstar Queue."
@@ -108,3 +108,26 @@ closeout evidence, and retire only its own cleanup threads/workspace. Final
 report must include the disposition manifest, exact files changed/deleted,
 validation and review evidence, retained historical exceptions, and current
 approved frontier.
+
+## Closeout
+
+Completed and merged through PR `#22` at
+`a0944037763b624ad0b0cd43dafe456479e8826f` after the accepted exact-head review
+in comment `5603511980` at `f783a5da8f3de3a4ea27279690a22286470218cd`. The
+retirement deleted `docs/roadmaps/backlog/` (7 files: `README.md`,
+`backlog-item-template.md`, and the five `post-gNN` items), preserved deferred
+meaning in two timestamped triage notes, and repointed live doctrine, front
+doors, contracts, architecture surfaces, and templates to triage, as recorded
+in the closeout log:
+`docs/logs/2026-09/09-roadmap-backlog-retirement-closeout.md`.
+
+Validation passed at the reviewed head: `effigy qa:docs`,
+`effigy qa:northstar`, and `git diff --check`; `find docs -type d -name
+backlog -print` returns nothing and triage stays non-authoritative. The
+review's required findings were resolved with no changes required; its two
+non-blocking notes (archive provenance pointers, canonical-authority citation
+originating in this handoff) remain deliberate accepted limits.
+
+The approved frontier is unchanged: `g11.001`–`g11.003` complete, no ready
+task, do not open `g12`. Preserve the existing next pointer to operator
+planning or triage review; no new generation is authorized by this lane.
