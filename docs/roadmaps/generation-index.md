@@ -226,7 +226,7 @@ If that cleanup has not happened, stay in the current generation and finish the 
 
 Long-horizon sequencing after the `g10` stretch audit lives in
 [`strategic-runway.md`](./strategic-runway.md). Use it for generation rollover
-planning and operator target selection; do not treat it as a ready card.
+planning and operator target selection; do not treat it as a ready task.
 
 ## Next Task
 

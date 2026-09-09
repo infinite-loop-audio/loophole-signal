@@ -90,5 +90,5 @@ Loophole grows beyond stereo.
 ## Next Task
 
 Promote one deferred item only when the operator selects it in
-`docs/roadmaps/strategic-runway.md` or an active generation milestone
+`docs/roadmaps/strategic-runway.md` or an active generation task
 requires it. Do not schedule plugin-hosting baseline work from this file.

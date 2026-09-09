@@ -9,8 +9,8 @@ Depends on: `docs/roadmaps/generation-index.md`, `docs/roadmaps/backlog/post-g10
 ## Purpose
 
 Shape Signal's long-horizon direction after the `g10` stretch audit without
-pretending every future batch is already known. This file connects vision,
-architecture, contracts, and generation sequencing. It is not a ready card and
+pretending every future task is already known. This file connects vision,
+architecture, contracts, and generation sequencing. It is not a ready task and
 does not authorize execution.
 
 ## Strategic direction
