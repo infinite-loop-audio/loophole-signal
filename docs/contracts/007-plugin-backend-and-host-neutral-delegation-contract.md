@@ -246,5 +246,6 @@ VST3/AU remain later work.
 ## Next Task
 
 COMPLETE. This contract closed with `g04.005`, and the full `g04` generation
-is now complete. The next likely queue is recorded in
-`docs/roadmaps/backlog/post-g04-consumer-release-and-backend-breadth.md`.
+is now complete. The next queue was promoted into `g05` on 2026-03-12 (former
+roadmap-backlog item; that surface was retired 2026-09-09). The `g05`
+generation record owns what followed.

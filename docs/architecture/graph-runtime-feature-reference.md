@@ -2270,15 +2270,16 @@ shell.
   verdict, with each readiness area marked sufficient for closeout instead of
   review-only
 - the shared closeout surface now points at
-  `docs/roadmaps/backlog/post-g08-repeated-run-environment-matrices-and-downstream-workflow-depth.md`
+  `docs/triage/20260909-retired-backlog-post-g08-environment-matrices.md`
   as the explicit post-`g08` queue instead of a self-referential placeholder
+  (roadmap-backlog path retired 2026-09-09; same meaning preserved in triage)
 - `g08` is now complete, and broader repeated-run or environment-matrix depth
-  is explicit backlog work rather than an implied still-active generation
+  is explicit deferred triage candidacy rather than an implied still-active generation
 
 ## Next Task
 
 COMPLETE. `g08` is closed. Promote
-`docs/roadmaps/backlog/post-g08-repeated-run-environment-matrices-and-downstream-workflow-depth.md`
+`docs/triage/20260909-retired-backlog-post-g08-environment-matrices.md`
 only when maintainers choose to open the post-`g08` generation.
 
 ## g08.019 Batch 19.3 Outcome

@@ -101,7 +101,7 @@ Treat roadmap generations as substantial sequencing eras, not tiny buckets. In a
 
 Treat rollover as full closeout:
 
-- every task in the old generation must be explicitly closed, paused, superseded, or moved to backlog
+- every task in the old generation must be explicitly closed, paused, superseded, or moved to triage
 - the roadmap front doors must reflect that closed state before the next generation opens
 - stale specs from the closing generation must be archived or removed from `docs/specs/`
 
@@ -115,6 +115,6 @@ If those closeout conditions are not satisfied, repair the current generation in
 ## Next Task
 
 Signal is baseline-routed with `g11.001` through `g11.003` complete. Return to
-operator planning or backlog selection; there is no ready task. Do not start a
-follow-on generation or infer a product backlog pull. Reopen this contract when
+operator planning or triage review; there is no ready task. Do not start a
+follow-on generation or infer a product pull from triage without operator selection. Reopen this contract when
 a future generation installs a new strict lane.

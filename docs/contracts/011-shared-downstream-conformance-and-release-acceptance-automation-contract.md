@@ -206,6 +206,6 @@ The current repo-owned baseline that this contract builds on is:
 ## Next Task
 
 COMPLETE. The shared downstream automation boundary is closed as part of the
-completed `g05` generation. Promote
-`docs/roadmaps/backlog/post-g05-publication-promotion-and-shared-acceptance-depth.md`
-only when maintainers choose to open the post-`g05` generation.
+completed `g05` generation. The deferred publication scope was promoted into
+`g06` on 2026-03-13 in narrowed form (former roadmap-backlog item; that
+surface was retired 2026-09-09). The `g06` generation record owns what followed.

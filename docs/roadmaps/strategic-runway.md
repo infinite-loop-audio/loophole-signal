@@ -4,7 +4,7 @@ Status: active planning surface
 Owner: core-product
 Updated: 2026-08-27
 Vision refs: `docs/vision/001-signal-vision.md`
-Depends on: `docs/roadmaps/generation-index.md`, `docs/roadmaps/backlog/post-g10-rebuild-on-demand.md`, `docs/contracts/072-real-plugin-hosting-discovery-and-sandbox-execution-contract.md`
+Depends on: `docs/roadmaps/generation-index.md`, `docs/triage/20260909-retired-backlog-post-g10-rebuild-on-demand.md`, `docs/contracts/072-real-plugin-hosting-discovery-and-sandbox-execution-contract.md`
 
 ## Purpose
 
@@ -43,9 +43,9 @@ Evidence as of 2026-08-27:
 - CLAP, VST3, AU, and LV2 hosting is implemented through adapter crates,
   `signal-plugin-sandbox`, and `signal-plugin-bridge`. Production host-assembly
   wiring (`g11.001`) and SharedSandbox multiplexing (`g11.002`) are closed.
-  Remaining plugin work is product-pulled backlog depth, not "build hosting
+  Remaining plugin work is product-pulled triage depth, not "build hosting
   from scratch."
-- Deferred rebuild candidates live in backlog, not in the active queue.
+- Deferred rebuild candidates live in triage, not in the active queue.
 
 Material contradictions resolved in this refresh:
 
@@ -66,7 +66,7 @@ Depends on:
 
 - operator selection of the next Signal-owned target
 - agreement that no stretch-audit or Automatic work remains open
-- roadmap front doors and backlog posture staying aligned
+- roadmap front doors and triage posture staying aligned
 
 Unlocks: a fresh strict lane or baseline-routed task under `g11` without
 carrying stale `g10` pointers forward.
@@ -148,7 +148,7 @@ consumer contract.
 | --- | --- | --- | --- |
 | Host-assembly wiring | turns shipped hosting into a consumer path | `signal-host-local` + bridge | rebuilding adapters from scratch |
 | Graph successor | unlocks real production graphs, not demos | honest render/control split | reviving `signal-graph` execution path |
-| Rebuild-on-demand queue | prevents speculative fake depth | operator/product trigger | scheduling backlog items without pull |
+| Deferred rebuild candidates (triage) | prevents speculative fake depth | operator/product trigger | scheduling triage candidates without pull |
 | Frozen stretch baseline | protects shipped product truth | none | Automatic routing or RealtimePreview adoption |
 | Incremental C++ replacement | matches vision delivery envelope | production integration proof | silent topology shims |
 
@@ -157,19 +157,19 @@ Accepted uncertainty:
 - which product-pulled Horizon B item opens next (graph successor, device
   depth, or consumer-release depth)
 - whether formal `g10` generation closeout needs a separate docs-only card
-- whether engine-server returns before product pull justifies it (still backlog)
+- whether engine-server returns before product pull justifies it (still deferred in triage)
 
 ## Runway
 
 Meaningful task transitions, not a per-turn queue:
 
 1. **Now:** `g11.001`, `g11.002`, and `g11.003` are complete. Stop for operator selection of
-   the next Signal-only backlog pull.
+   the next Signal-only product pull from triage.
 2. **After selection:** next product-pulled Horizon B item (graph successor,
    device depth, or consumer-release depth), not a speculative lane.
 3. **First `g11` tranche:** host-assembly (`g11.001`, complete) then SharedSandbox
    (`g11.002`, complete).
-4. **Second `g11` tranche:** pull the next product-pulled item from backlog only
+4. **Second `g11` tranche:** pull the next product-pulled item from triage only
    after the operator names it.
 5. **Mid horizon:** promote analysis/substrate breadth (Horizon C) when a named
    contract or consumer need exists.
@@ -188,7 +188,7 @@ Recommended default if the operator wants a concrete starting point:
 | long-horizon outcomes and constraints | `docs/vision/001-signal-vision.md` |
 | system shape and invariants | `docs/architecture/` |
 | durable authority or behaviour | `docs/contracts/` |
-| deferred rebuild candidates | `docs/roadmaps/backlog/post-g10-rebuild-on-demand.md` |
+| deferred rebuild candidates | `docs/triage/20260909-retired-backlog-post-g10-rebuild-on-demand.md` |
 | generation sequencing and rollover | `docs/roadmaps/generation-index.md` |
 | executable tasks | `docs/roadmaps/g11/` tasks (`g11.NNN`, one file per task) |
 | refresh and atlas evidence | `docs/logs/2026-08/17-northstar-refresh-and-atlas-runway.md` |
@@ -208,7 +208,7 @@ Windows CLAP discovery (`087`) on 2026-08-22. Do not open `g12`.
 
 ## Next Task
 
-Stop for operator selection of the next Signal-only backlog pull. Do not start
+Stop for operator selection of the next Signal-only product pull from triage. Do not start
 a follow-on generation. `g11.001`, `g11.002`, and `g11.003` are complete.
 Linux CLAP (`086`) and Windows CLAP (`087`) discovery are shipped. Do not open
 `g12`.

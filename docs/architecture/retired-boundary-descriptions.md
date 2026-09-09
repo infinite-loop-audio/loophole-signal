@@ -25,12 +25,12 @@ What was worth keeping:
   platform story starts at `signal-hardware-cpal` (negotiated output streams +
   device enumeration, `g10.003`) and continues through the shipped plugin-hosting
   adapters. Remaining deferred platform/device depth lives in
-  `docs/roadmaps/backlog/post-g10-rebuild-on-demand.md`.
+  `docs/triage/20260909-retired-backlog-post-g10-rebuild-on-demand.md`.
 
 `signal-host-server` (deleted in the same packet) contained no serving
 machinery — it was an in-process copy of `signal-host-local` plus the LV2
 adapter wiring, with a mirrored test suite. Nothing was relocated from it;
 an eventual engine server starts from the `signal-ipc` shared-memory broker
-per the rebuild backlog.
+per the rebuild triage candidates.
 
 Full text of both crates remains in git history (pre-g10.004 commits).

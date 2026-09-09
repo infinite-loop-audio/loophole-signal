@@ -145,5 +145,5 @@ jump straight to the layer that matches your question.
 
 ## Next Task
 
-Return to operator planning or backlog selection. `g11` has no ready task; do
-not open `g12` or infer a product backlog pull from this maintenance lane.
+Return to operator planning or triage review. `g11` has no ready task; do
+not open `g12` or infer a product pull from triage without operator selection.

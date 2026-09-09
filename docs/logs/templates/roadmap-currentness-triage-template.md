@@ -17,7 +17,7 @@ Scope: <roadmap generation / project scope>
 
 ## Source Items Reviewed
 
-- <roadmap/log/backlog refs>
+- <roadmap/log/triage refs>
 
 ## Validation
 

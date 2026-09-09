@@ -32,4 +32,4 @@ pointers, then run `effigy qa:docs` and `effigy qa:northstar`.
 ## Next Task
 
 Resolve the two stale pointers in a docs-authorized currentness pass before
-another strict lane or backlog item is promoted.
+another strict lane or triage candidate is promoted.

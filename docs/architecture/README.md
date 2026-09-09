@@ -56,7 +56,7 @@ Keep generation task sequencing in `roadmaps/`.
 
 ## Next Task
 
-Stop for operator selection of the next Signal-only backlog pull. Do not start
+Stop for operator selection of the next Signal-only product pull from triage. Do not start
 a follow-on generation. `g11.001` and `g11.002` are complete. Keep the `g10`
 stretch state closed. Linux CLAP filesystem discovery (`086`) shipped
 2026-08-21. Do not open `g12`.

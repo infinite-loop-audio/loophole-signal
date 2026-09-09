@@ -6,6 +6,12 @@ they hit a solvable hurdle; they do not stop the current task to fix one.
 ## Open
 
 <!-- Keep entries short. Append newest entries at the top. Do not include secrets. -->
+### [ ] No check flags live `docs/roadmaps/backlog/` references before deletion — 2026-09-09
+- Friction: retiring the roadmap backlog required a manual `grep` sweep for
+  inbound `roadmaps/backlog` paths; `effigy docs check links` only confirmed
+  the result after the fact.
+- Solvable: a docs checker or `qa:northstar` rule that lists live-surface
+  references to a deprecated docs path before it is removed.
 
 ## Closed
 
