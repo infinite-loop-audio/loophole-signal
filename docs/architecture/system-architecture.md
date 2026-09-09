@@ -106,11 +106,11 @@ and transport-session concurrency were removed in g10.020.
   `signal-plugin-sandbox`, and `signal-plugin-bridge`. `g11.001` wired those
   backends through `signal-host-local`.
 - SharedSandbox multiplexing closed in `g11.002`. Remaining plugin
-  integration work is product-pulled workflow depth listed in
-  `docs/roadmaps/backlog/post-g10-rebuild-on-demand.md`.
+  integration work is product-pulled workflow depth held as triage candidates in
+  `docs/triage/20260909-retired-backlog-post-g10-rebuild-on-demand.md`.
 
 ## Next Task
 
-Stop for operator selection of the next Signal-only backlog pull. Do not start
+Stop for operator selection of the next Signal-only product pull from triage. Do not start
 a follow-on generation. `g11.001` and `g11.002` are complete. Linux CLAP
 filesystem discovery (`086`) shipped 2026-08-21. Do not open `g12`.

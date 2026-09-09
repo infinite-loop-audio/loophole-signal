@@ -147,6 +147,6 @@ Landed in `g11.002`. Contract `014` owns semantics. v1 multiplexing map:
 
 ## Next Task
 
-Stop for operator selection of the next Signal-only backlog pull. Do not start
+Stop for operator selection of the next Signal-only product pull from triage. Do not start
 a follow-on generation. Use `docs/roadmaps/g11/README.md` as the live front
 door.

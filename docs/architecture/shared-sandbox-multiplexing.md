@@ -162,6 +162,6 @@ policy table.
 
 ## Next Task
 
-Stop for operator selection of the next Signal-only backlog pull. Do not start
+Stop for operator selection of the next Signal-only product pull from triage. Do not start
 a follow-on generation from this note. Use `docs/roadmaps/g11/README.md` as
 the live front door.

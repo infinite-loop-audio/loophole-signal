@@ -46,7 +46,7 @@ Use this section for:
 
 - active implementation tasks
 - generation control
-- backlog and deferred work
+- deferred candidates via triage (non-authoritative)
 
 ## Layout
 
@@ -54,8 +54,7 @@ Use this section for:
 - `g11/`: active generation tasks (`g11.NNN`, one file per Northstar task)
 - `archive/`: non-procedural roll-ups for closed generations (`g01`–`g10`)
 - `generation-index.md`: generation history and rollover notes
-- `backlog/`: deferred work only
-- `templates/`: roadmap authoring support
+- `templates/`: roadmap authoring support (deferred candidates live in `docs/triage/`, not in this tree)
 
 ## Current posture
 
@@ -255,15 +254,14 @@ Product workflow planning remains deferred in `g10.025` until a real consumer
 needs the Signal-owned contract.
 Assessment driving phase two:
 `docs/research/2026-06-11-post-demolition-assessment.md`. Higher-quality SRC,
-graph successor, device depth, and PDC remain in
-`backlog/post-g10-rebuild-on-demand.md` until a product feature pulls them.
-Plugin hosting baseline work is shipped — see Contract `072` and
+graph successor, device depth, and PDC remain deferred triage candidates in
+`docs/triage/20260909-retired-backlog-post-g10-rebuild-on-demand.md` until a
+product feature pulls them.
 `docs/architecture/system-inventory.md` for the current integration seams.
 
-`g06`, `g07`, `g08`, and `g09` are complete. The earlier post-`g08` backlog
-note remains in
-`docs/roadmaps/backlog/post-g08-repeated-run-environment-matrices-and-downstream-workflow-depth.md`.
-`g01` established the Rust workspace, engine, host/device
+`g06`, `g07`, `g08`, and `g09` are complete. The earlier post-`g08` deferred
+note lives in
+`docs/triage/20260909-retired-backlog-post-g08-environment-matrices.md`.
 path, and plugin/runtime baseline; `g02` completed the first reusable DSP and
 deep-analysis expansion on top of that foundation; `g03` completed the next
 engine-oriented runtime depth queue; `g04` completed the reusable contract,
@@ -421,7 +419,7 @@ Signal is not currently running an active strict lane.
 
 - keep one active queue
 - log by meaningful batch
-- move deferred scope into backlog instead of leaving it half-active
+- move deferred scope into triage instead of leaving it half-active
 
 ## Rollover guardrail
 
@@ -429,13 +427,12 @@ Do not open `gNN+1` while the current generation still has live roadmap files or
 
 Before rollover:
 
-- every roadmap in the closing generation must be explicitly closed, paused, superseded, or moved to backlog
+- every roadmap in the closing generation must be explicitly closed, paused, superseded, or moved to triage
 - the roadmap front doors must agree that the old generation is no longer the live queue
 - `docs/specs/` must be purged so only live or near-live planning artifacts remain in the active tree
 
 ## Next Task
 
-Stop for operator selection of the next Signal-only backlog pull. Do not start
-a follow-on generation. `g11.001`, `g11.002`, and `g11.003` are complete.
+Stop for operator selection of the next Signal-only product pull from triage. Do not start
 Linux CLAP filesystem discovery (`086`) shipped 2026-08-21 (Soundcheck card
 136 / Signal PR #6). Do not open `g12`.
