@@ -60,6 +60,10 @@ wanted: design transport + session dispatch fresh on `signal-ipc` shared memory.
 
 Device-change notifications, input/duplex streams for recording, explicit
 device selection UI contract. Builds on `g10.003`'s cpal enumeration.
+Inherited open gate: `g10.017` recording capture and live monitoring landed;
+hardware alignment and consumer evidence remain an explicit operator gate
+(see `docs/roadmaps/archive/g10.md`). Pull this section only when a product
+feature needs it.
 
 ## Resampling/time domain
 
@@ -86,5 +90,5 @@ Loophole grows beyond stereo.
 ## Next Task
 
 Promote one deferred item only when the operator selects it in
-`docs/roadmaps/strategic-runway.md` or an active generation milestone
+`docs/roadmaps/strategic-runway.md` or an active generation task
 requires it. Do not schedule plugin-hosting baseline work from this file.

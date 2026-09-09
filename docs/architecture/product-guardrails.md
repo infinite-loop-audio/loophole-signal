@@ -14,7 +14,7 @@ host-local duplication, or unsafe shortcuts.
 ## Guardrails
 
 - prefer real runtime and adapter behavior over scaffolded or synthetic truth
-  when a milestone claims concrete plugin, backend, or execution depth
+  when a task claims concrete plugin, backend, or execution depth
 - do not leave placeholder discovery, broker, device, or recovery behavior in
   place once a lane is supposed to prove the real path
 - preserve realtime safety on audio-thread and timing-sensitive paths; if a
@@ -34,7 +34,7 @@ host-local duplication, or unsafe shortcuts.
 
 ## Stop Conditions
 
-- a batch would keep synthetic device or plugin truth where the lane is meant
+- a task would keep synthetic device or plugin truth where the lane is meant
   to prove a real path
 - host duplication is being preserved for convenience rather than because the
   environment boundary is genuinely different
@@ -43,5 +43,5 @@ host-local duplication, or unsafe shortcuts.
 ## Next Task
 
 Use these guardrails with the active generation front door and
-`docs/roadmaps/strategic-runway.md` so new batch cards stay focused on real
+`docs/roadmaps/strategic-runway.md` so new tasks stay focused on real
 runtime and host behavior rather than scaffolded or downstream-app scope.

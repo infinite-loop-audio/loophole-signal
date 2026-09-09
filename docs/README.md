@@ -29,7 +29,7 @@ Pick the path that matches what you're doing:
   find the contract that owns your seam in the [contract index](./contracts/contract-index.md),
   and check the [active generation roadmap](./roadmaps/g11/README.md) before
   starting anything. `g11.003`, the bounded instruction and Rust quality audit,
-  is merged and complete; there is no ready card.
+  is merged and complete; there is no ready task.
 - **I need the current status in one paragraph.** Each section README below
   opens with a short "in plain words" summary. The
   [roadmaps README](./roadmaps/README.md) is the single best status snapshot.
@@ -104,7 +104,7 @@ jump straight to the layer that matches your question.
 - [Strategic Runway](./roadmaps/strategic-runway.md) — long-horizon sequencing
   after the `g10` stretch audit.
 - [Active Generation g11](./roadmaps/g11/README.md) — current queue.
-- [Generation g10](./roadmaps/g10/README.md) — closing generation; stretch audit
+- [Generation g10](./roadmaps/archive/g10.md) — archived; stretch audit
   complete.
 - [Generation Index](./roadmaps/generation-index.md) — the history of
   generations `g01`…`g11`.
@@ -134,9 +134,9 @@ jump straight to the layer that matches your question.
 - treat an active generation as a lane-first strict Northstar surface under
   `docs/specs/` only while that generation is explicitly open
 - if there is no active strict lane, use the roadmap and contract front doors
-  instead of reading old batch-card state as current authority
+  instead of reading old milestone/card state as current authority
 - in the strict lane, treat a bare `continue` as "follow the previous closeout's
-  `Next Task`" rather than as permission to infer a new batch
+  `Next Task`" rather than as permission to infer a new task
 
 ## Validation
 
@@ -145,5 +145,5 @@ jump straight to the layer that matches your question.
 
 ## Next Task
 
-Return to operator planning or backlog selection. `g11` has no ready card; do
+Return to operator planning or backlog selection. `g11` has no ready task; do
 not open `g12` or infer a product backlog pull from this maintenance lane.

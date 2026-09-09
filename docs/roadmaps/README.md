@@ -42,17 +42,15 @@ Roadmaps turn the Signal library/runtime strategy into executable batches.
 
 Use this section for:
 
-- active implementation milestones
+- active implementation tasks
 - generation control
 - backlog and deferred work
 
 ## Layout
 
 - `strategic-runway.md`: long-horizon sequencing after the active generation
-- `g11/`: active generation milestones
-- `g10/`: closing generation; stretch audit complete
-- `gNN/batch-cards/` optional per-generation execution cards
-- `g*/`: generation roadmaps and closure records
+- `g11/`: active generation tasks (`g11.NNN`, one file per Northstar task)
+- `archive/`: non-procedural roll-ups for closed generations (`g01`–`g10`)
 - `generation-index.md`: generation history and rollover notes
 - `backlog/`: deferred work only
 - `templates/`: roadmap authoring support
@@ -61,11 +59,10 @@ Use this section for:
 
 > Everything below this heading is the batch-by-batch evidence narrative — the
 > working spine for automation and audit. Humans: the summary above is the
-> current state; the [g10 milestone map](./g10/README.md#milestone-map) is the
+> current state; the [g10 roll-up](./archive/g10.md) is the
 > per-roadmap status; this narrative is for detail and history.
 
-`g10` is historical. Its per-generation front door is
-`docs/roadmaps/g10/README.md`. Phase one (002-009) completed the audit
+`g10` is historical. Its roll-up is `docs/roadmaps/archive/g10.md`. Phase one (002-009) completed the audit
 remediation work: production-path declick + hardening, simulated/narration
 mass demolition, workspace consolidation, and CI cleanup. Phase two (010-020)
 completed the engine build-out on the surviving seed: graph-shaped plans,
@@ -404,18 +401,19 @@ explicit matrix, confirms all isolated state is absent, and closes `g10.035`.
 The 2026-07-27 `signal-dsp-stretch` audit is the operator-selected planning
 target `g10.035` required. It measured four defects in the retained Transparent
 baseline, one flaky evidence gate, and twelve quality, surface, and
-architecture findings. `g10.036` through `g10.040` compile them in dependency
+architecture findings. `g10.036` through `g10.042` compiled them in dependency
 order: correctness, cache identity, surface consolidation, resumable offline
-render, then RealtimePreview completion. `g10.024` and `g10.028` are superseded
-by `g10.040`. Only `g10.036` Batch 36.1 is ready, and it is documentation only.
+render, RealtimePreview completion, `A18` triage, and pitch-aware resumable
+render. `g10.024` and `g10.028` are superseded by `g10.040`. All findings are
+closed; see the [g10 roll-up](./archive/g10.md).
 
 ## Strict lane posture
 
 Signal is not currently running an active strict lane.
 
-- strict-lane reference:
-  `docs/specs/001-g09-lane-first-strict-adoption.md`
-- current ready card: none
+- strict-lane reference: none (the closed `g09` lane spec is archived at
+  `docs/specs/archive/001-g09-lane-first-strict-adoption.md`)
+- current ready task: none
 
 ## Working Rule
 
@@ -436,6 +434,6 @@ Before rollover:
 ## Next Task
 
 Stop for operator selection of the next Signal-only backlog pull. Do not start
-a follow-on generation. `g11.001` and `g11.002` are complete. Linux CLAP
-filesystem discovery (`086`) shipped 2026-08-21 (Soundcheck card 136 / Signal
-PR #6). Do not open `g12`.
+a follow-on generation. `g11.001`, `g11.002`, and `g11.003` are complete.
+Linux CLAP filesystem discovery (`086`) shipped 2026-08-21 (Soundcheck card
+136 / Signal PR #6). Do not open `g12`.

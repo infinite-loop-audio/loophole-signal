@@ -1,4 +1,4 @@
-# 003 - Northstar Instruction And Rust Quality Audit
+# g11.003 - Northstar Instruction And Rust Quality Audit
 
 Status: complete; merged through PR `#18` after one review wave
 Owner: core-product
@@ -7,6 +7,13 @@ Updated: 2026-09-01
 Depends on: g11.002
 Vision tags: `QUALITY`, `MAINTAINABILITY`, `REALTIME`
 Governing refs: `AGENTS.md`, `docs/contracts/001-working-rules.md`, `docs/contracts/rust-quality-profile.json`, `docs/contracts/rust-quality-deviations.json`, `docs/architecture/system-architecture.md`, `docs/architecture/product-guardrails.md`
+
+## Outcome
+
+One repository-scope Northstar instruction and strict Rust audit with only
+pre-authorized finding-first repairs, landed through one reviewable PR with
+complete preservation and validation evidence. No product behavior, no new
+generation.
 
 ## Problem
 
@@ -38,20 +45,18 @@ architecture rewrite.
   architecture verdicts
 - changing `.github/workflows/` or running release mutations
 
-## Execution Plan
+## Delivery record
 
-### Batch 3.1 - AGENTS And Rust Repository Audit
+Absorbed the former execution card `008` (Northstar AGENTS and Rust audit)
+during the flattened-task migration; no scope changed. Card `008` ran as one
+worker lane:
 
-Status: complete
-
-- review the full instruction reader journey and exact Claude bridge
-- initialize the Rust audit recorder before source mutation
-- partition all workspace crates into disjoint architecture-aligned units
-- run correctness, architecture, and human-quality assessments for every unit
-- apply only bounded recorder-authorized repairs, then finalize evidence and
-  reconcile the planning/log surfaces
-
-Card: `docs/roadmaps/g11/batch-cards/008-g11-003-northstar-agents-rust-audit.md`.
+- reviewed the full instruction reader journey and exact Claude bridge
+- initialized the Rust audit recorder before source mutation
+- partitioned all workspace crates into disjoint architecture-aligned units
+- ran correctness, architecture, and human-quality assessments for every unit
+- applied only bounded recorder-authorized repairs, then finalized evidence
+  and reconciled the planning/log surfaces
 
 ## Acceptance Criteria
 
@@ -65,7 +70,7 @@ Card: `docs/roadmaps/g11/batch-cards/008-g11-003-northstar-agents-rust-audit.md`
   report-only and operator-decision surfaces remain unchanged
 - Rust 1.95 floor evidence and repository-native current-toolchain validation
   are recorded honestly, including unavailable or warning-bearing evidence
-- docs, card, log, and front doors agree on the result and next state
+- docs, task, log, and front doors agree on the result and next state
 
 ## Review Oracle
 
@@ -89,14 +94,27 @@ review rejects the PR. Required proof is the finalized recorder report,
 changed-file attribution, preservation hashes, exact command evidence, AGENTS
 section map, and clean final diff.
 
-## Evidence Requirements
+## Result
 
-- opening and closeout log under `docs/logs/2026-08/`
-- finalized Northstar Rust audit report from repository Git metadata, with the
-  audit ID and catalogue hash recorded in the closeout log
-- AGENTS advisory measurement plus human section disposition
-- focused evidence for every repair and `effigy qa`, `effigy qa:docs`, and
-  `effigy qa:northstar` results
+Audit `signal-g11-003-repository-audit` covered all 28 crates in 14 units at
+status `degraded`: 89 recorder-authorized repairs applied (28 `RUST-MSRV-001`,
+47 `RUST-API-001`, 14 `RUST-ERR-001`) and 8 `RUST-UNSAFE-001` findings left
+report-only. `AGENTS.md` kept all eight sections and every boundary;
+`CLAUDE.md` is unchanged. Required local validation all exits 0.
+Evidence: `docs/logs/2026-08/31-g11-003-northstar-agents-rust-audit-closeout.md`.
+
+One review wave followed orchestrator review. Linux CI falsified the first-wave
+`AuProcessSession` `Debug` repair, because the recorder's `plugin-formats`
+evidence was collected host-local on macOS and never compiled that `cfg`-split
+public type's non-macOS shape. The corrected file is a review-wave change outside
+the finalized recorder hashes; the sealed result stands unmodified. This is the
+task's own acceptance criterion working — validation exposed a defect and the
+limitation is now recorded rather than papered over.
+
+Two follow-ups were surfaced and deliberately not opened: the unsafe-hardening
+lane (214 undocumented unsafe blocks, an operator decision under this rule's
+report-only authority) and the `missing_errors_doc` backlog (222 sites, an
+evaluation-only lint that grants no repair authority).
 
 ## Stop Conditions
 
@@ -106,30 +124,7 @@ section map, and clean final diff.
 - a missing external contract prevents an honest assessment
 - validation changes the plan or exposes work outside this maintenance lane
 
-## Result
-
-Card `008` ran as one worker lane. Audit `signal-g11-003-repository-audit`
-covered all 28 crates in 14 units at status `degraded`: 89 recorder-authorized
-repairs applied (28 `RUST-MSRV-001`, 47 `RUST-API-001`, 14 `RUST-ERR-001`) and 8
-`RUST-UNSAFE-001` findings left report-only. `AGENTS.md` kept all eight sections
-and every boundary; `CLAUDE.md` is unchanged. Required local validation all
-exits 0.
-Evidence: `docs/logs/2026-08/31-g11-003-northstar-agents-rust-audit-closeout.md`.
-
-One review wave followed orchestrator review. Linux CI falsified the first-wave
-`AuProcessSession` `Debug` repair, because the recorder's `plugin-formats`
-evidence was collected host-local on macOS and never compiled that `cfg`-split
-public type's non-macOS shape. The corrected file is a review-wave change outside
-the finalized recorder hashes; the sealed result stands unmodified. This is the
-milestone's own acceptance criterion working — validation exposed a defect and
-the limitation is now recorded rather than papered over.
-
-Two follow-ups were surfaced and deliberately not opened: the unsafe-hardening
-lane (214 undocumented unsafe blocks, an operator decision under this rule's
-report-only authority) and the `missing_errors_doc` backlog (222 sites, an
-evaluation-only lint that grants no repair authority).
-
 ## Next Task
 
-Return to operator planning or backlog selection. There is no ready card; do
+Return to operator planning or backlog selection. There is no ready task; do
 not infer another product or maintenance batch.

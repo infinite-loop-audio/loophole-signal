@@ -9,8 +9,8 @@ Depends on: `docs/roadmaps/generation-index.md`, `docs/roadmaps/backlog/post-g10
 ## Purpose
 
 Shape Signal's long-horizon direction after the `g10` stretch audit without
-pretending every future batch is already known. This file connects vision,
-architecture, contracts, and generation sequencing. It is not a ready card and
+pretending every future task is already known. This file connects vision,
+architecture, contracts, and generation sequencing. It is not a ready task and
 does not authorize execution.
 
 ## Strategic direction
@@ -68,7 +68,7 @@ Depends on:
 - agreement that no stretch-audit or Automatic work remains open
 - roadmap front doors and backlog posture staying aligned
 
-Unlocks: a fresh strict lane or baseline-routed milestone under `g11` without
+Unlocks: a fresh strict lane or baseline-routed task under `g11` without
 carrying stale `g10` pointers forward.
 
 Excludes: Loophole UI/workflow ownership, Chorus mixer realization, and any
@@ -161,9 +161,9 @@ Accepted uncertainty:
 
 ## Runway
 
-Meaningful milestone transitions, not a task queue:
+Meaningful task transitions, not a per-turn queue:
 
-1. **Now:** `g11.001` and `g11.002` are complete. Stop for operator selection of
+1. **Now:** `g11.001`, `g11.002`, and `g11.003` are complete. Stop for operator selection of
    the next Signal-only backlog pull.
 2. **After selection:** next product-pulled Horizon B item (graph successor,
    device depth, or consumer-release depth), not a speculative lane.
@@ -190,15 +190,17 @@ Recommended default if the operator wants a concrete starting point:
 | durable authority or behaviour | `docs/contracts/` |
 | deferred rebuild candidates | `docs/roadmaps/backlog/post-g10-rebuild-on-demand.md` |
 | generation sequencing and rollover | `docs/roadmaps/generation-index.md` |
-| executable batches | `docs/roadmaps/g11/` milestones and cards |
+| executable tasks | `docs/roadmaps/g11/` tasks (`g11.NNN`, one file per task) |
 | refresh and atlas evidence | `docs/logs/2026-08/17-northstar-refresh-and-atlas-runway.md` |
 
 ## Open operator decisions
 
-1. Does formal `g10` generation closeout need a separate docs-only card?
+None on generation closeout: `g10` was archived at
+`docs/roadmaps/archive/g10.md` by the flattened-task migration (no separate
+docs-only card needed).
 
 `g11.002` product pull landed 2026-08-17 (operator). v1 grouping is plugin
-type identity. Batches 2.0–2.3 closed.
+type identity. Tasks `g11.001`–`g11.003` closed.
 
 Soundcheck card 135 merged and Soundcheck card 136 / Signal PR #6 shipped
 Linux CLAP filesystem discovery (`086`) on 2026-08-21. Signal PR #7 shipped
@@ -207,5 +209,6 @@ Windows CLAP discovery (`087`) on 2026-08-22. Do not open `g12`.
 ## Next Task
 
 Stop for operator selection of the next Signal-only backlog pull. Do not start
-a follow-on generation. `g11.001` and `g11.002` are complete. Linux CLAP
-(`086`) and Windows CLAP (`087`) discovery are shipped. Do not open `g12`.
+a follow-on generation. `g11.001`, `g11.002`, and `g11.003` are complete.
+Linux CLAP (`086`) and Windows CLAP (`087`) discovery are shipped. Do not open
+`g12`.

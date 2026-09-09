@@ -145,5 +145,5 @@ roots are explicit configuration defaulting empty.
 
 ## Next Task
 
-Keep inventory aligned with `docs/roadmaps/g11/README.md`. Execute
-`docs/roadmaps/g11/batch-cards/005-g11-002-broker-multiplexing.md`.
+Keep inventory aligned with `docs/roadmaps/g11/README.md`. `g11` has no ready
+task; do not execute closed tasks from history.

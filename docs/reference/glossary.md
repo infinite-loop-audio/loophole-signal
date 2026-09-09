@@ -26,13 +26,13 @@ rewriting it.
 | **Vision** | The long-horizon "what are we building and why" layer. |
 | **Architecture** | The "how it fits together" layer: crates, boundaries, invariants. |
 | **Contract** | A frozen boundary decision. Numbered `001`–`085`, each a `.md` file in `docs/contracts/`. Contracts exist because prose architecture was not precise enough for some seam. See `docs/contracts/contract-index.md`. |
-| **Roadmap** | A numbered delivery plan, written as `gNN.MMM` (e.g. `g10.036`). The `gNN` is the generation, the `MMM` is the milestone. |
-| **Generation** | A numbered wave of work, `g01`…`g10`. `g10` is the active one. A new generation opens only when the previous one is fully closed. |
-| **Batch** | A single unit of execution inside a roadmap, e.g. "Batch 31.66" belongs to roadmap `g10.031`. Batch logs are the evidence trail. |
+| **Roadmap task** | A numbered delivery plan, written as `gNN.NNN` (e.g. `g11.002`). The `gNN` is the generation, the `NNN` is the task. Each task is one file at `docs/roadmaps/gNN/NNN-<slug>.md`; the generation README owns the roadmap and approved frontier. |
+| **Generation** | A numbered wave of work, `g01`…`g11`. `g11` is the active one; `g01`–`g10` are archived under `docs/roadmaps/archive/`. A new generation opens only when the previous one is fully closed. |
+| **Batch** | A historical unit of execution inside a pre-flattening milestone (e.g. "Batch 31.66" belonged to `g10.031`). Batch logs remain the evidence trail in `docs/logs/`, but no active executable surface uses batches. |
 | **Lane** | A bounded area of work with its own rules (e.g. the "stretch lane"). |
-| **Strict lane / spec lane** | An execution mode where work only proceeds from an approved card in `docs/specs/`. Signal is not running one right now. |
+| **Strict lane / spec lane** | An execution mode where work only proceeds from an approved task in `docs/specs/`. Signal is not running one right now. |
 | **Front door** | The README or index that routes readers into a docs section. |
-| **Ready card** | A planning artifact that has passed the rubric required to be executable. |
+| **Ready task** | A planning artifact that has passed the rubric required to be executable. |
 | **Rule 5 / Rule 11** | Numbered evidence rules defined in Contract `084`. Rule 5 governs admission by listening; Rule 11 governs when an evidence identity is closed. When you see "under Rule 11", it means "closed because its evidence trail failed its own rules". |
 | **Admission / admitted** | The gated process of accepting a candidate implementation so its DSP enters the codebase. "Private admission" = internal surface only; "public admission" = a public API wrapper is shipped. |
 | **Checkpoint** | A frozen, immutable snapshot of a candidate implementation plus its evidence, referenced by hash (e.g. `760da32d`). |
@@ -96,8 +96,8 @@ rewriting it.
 
 | You see | Meaning |
 | --- | --- |
-| `g10.031` | Generation 10, roadmap 031 |
-| `Batch 31.66` | Batch 66 inside roadmap 031 |
+| `g11.002` | Generation 11, task 002 |
+| `Batch 31.66` | Historical batch 66 inside old milestone `g10.031` (see `docs/roadmaps/archive/g10.md`) |
 | `Contract 084` | Contract number 084 in `docs/contracts/` |
 | `Y01`…`Y09`, `S01`…`S17` | Named evidence gates (synthetic pitch, structural proof, etc.) defined inside a contract or brief |
 | `4x` / `8x` / `16x` | Stretch ratios: output is 4, 8, or 16 times the source length |

@@ -29,14 +29,14 @@ or downstream product workflow.
 
 ## Work and authority
 
-- Use the canonical docs and ready-card surfaces. Do not invent a parallel
+- Use the canonical docs and ready-task surfaces. Do not invent a parallel
   planning authority.
 - Start with `docs/README.md`, then follow the relevant architecture,
-  contract, roadmap, and evidence surfaces. If no active card or planning
+  contract, roadmap, and evidence surfaces. If no active task or planning
   authority settles the next direction, stop and ask.
-- A strict lane is valid only while its current card and governing refs match
+- A strict lane is valid only while its current task and governing refs match
   live state. In that lane, a bare `continue` follows the previous closeout's
-  `Next Task`; without a ready card, re-enter planning instead of guessing.
+  `Next Task`; without a ready task, re-enter planning instead of guessing.
 - Normal-mode agents use the current checkout. Worker mode exists only after
   an explicit orchestrator-dispatched handoff under `docs/handoffs/`; never
   infer it from a branch, path, or harness. Operator-facing dispatch is that

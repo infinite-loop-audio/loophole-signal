@@ -1,11 +1,18 @@
-# 001 - Production Host-Assembly Wiring
+# g11.001 - Production Host-Assembly Wiring
 
 Status: complete
 Owner: core-product
 Created: 2026-08-17
 Depends on: g10 closeout (stretch audit complete)
 Vision tags: `PLUGINS`, `RUNTIME`, `INTEGRATION`
-Governing refs: `docs/contracts/072-real-plugin-hosting-discovery-and-sandbox-execution-contract.md`, `docs/contracts/009-shared-host-convenience-api-and-consumer-edge-contract.md`, `docs/contracts/014-plugin-isolation-policy-transport-rebind-and-shared-sandbox-continuity-contract.md`, `docs/architecture/system-inventory.md`
+Governing refs: `docs/contracts/072-real-plugin-hosting-discovery-and-sandbox-execution-contract.md`, `docs/contracts/009-shared-host-convenience-api-and-consumer-edge-contract.md`, `docs/contracts/014-plugin-isolation-policy-transport-rebind-and-shared-sandbox-continuity-contract.md`, `docs/architecture/system-inventory.md`, `docs/architecture/production-host-assembly-integration.md`
+
+## Outcome
+
+One honest assembly path from scan → placement → bridge backend →
+render-plane execution for Loophole and other consumers, without
+reconstructing test-only wiring. v1 supports `InProcess` and
+`DedicatedSandbox`; `SharedSandbox` stays a typed rejection until `g11.002`.
 
 ## Problem
 
@@ -21,9 +28,6 @@ sandbox, and render-plane tests.
   canonical consumer path
 - host crate docs still understate what is and is not wired today
 
-Loophole and other consumers need one honest assembly path from scan → placement
-→ bridge backend → render-plane execution without reconstructing test-only wiring.
-
 ## Goals
 
 - [x] freeze the host-assembly integration contract: authority chain, placement
@@ -38,69 +42,32 @@ Loophole and other consumers need one honest assembly path from scan → placeme
 
 ## Non-Goals
 
-- [ ] rebuilding adapter hosting from scratch
-- [ ] SharedSandbox tier implementation (see `g11.002`)
-- [ ] product browser, preset, or workflow UX
-- [ ] Loophole mixer/layout policy or Chorus realization
-- [ ] graph successor or device-depth backlog items
+- rebuilding adapter hosting from scratch
+- SharedSandbox tier implementation (see `g11.002`)
+- product browser, preset, or workflow UX
+- Loophole mixer/layout policy or Chorus realization
+- graph successor or device-depth backlog items
 
-## Execution Plan
+## Delivery record
 
-### Batch 1.1 - Integration Contract Freeze
+Absorbed the former milestone batches and execution cards `001`–`003`
+(bridge backend factory, render-plane consumer wiring, host-edge proof and
+closeout) during the flattened-task migration; no scope changed.
 
-Status: complete
-
-Scope: docs-only. No production-code edits.
-
-- [x] write the host-assembly integration map:
-  - `signal-host-local` orchestration boundaries
-  - `signal-plugin-bridge` backend selection by `PluginIsolationTier`
-  - render-plane `RenderPluginProcessor` ownership and lifetime
-  - runtime-owned placement and supervisor receipts that must stay authoritative
-- [x] name the v1 supported tiers (`InProcess`, `DedicatedSandbox`) and the
-  rejected tier (`SharedSandbox` → typed error until `g11.002`)
-- [x] list the public host-edge tests that must go green before Batch 1.4 closes
-- [x] amend Contract `072` or add a short architecture note only if the map
-  exposes a real contract gap; do not invent parallel authority
-
-Acceptance for this batch:
-
-- one operator-readable integration map exists under `docs/architecture/` or
-  `docs/contracts/`
-- `g11/README.md`, `strategic-runway.md`, and `system-inventory.md` point at it
-- Batch 1.2 scope is bounded enough to execute without fresh planning decisions
-
-Batch 1.1 closed 2026-08-17. Integration map:
-`docs/architecture/production-host-assembly-integration.md`.
-
-### Batch 1.2 - Bridge Backend Factory On LocalRuntimeHost
-
-Status: complete
-
-- [x] add host-owned backend construction for in-process CLAP/VST3/AU/LV2
-- [x] add host-owned `ShmPluginProcessor` construction bound to existing broker
-  sessions where `DedicatedSandbox` is selected
-- [x] surface typed failures for unsupported tiers, layouts, and missing discovery
-  records
-- [x] keep runtime-owned placement and lifecycle receipts authoritative
-
-### Batch 1.3 - Render-Plane Consumer Wiring
-
-Status: complete
-
-- [x] drive at least one offline render-plane plugin stage from the host assembly
-- [x] prove parameter/event/state handoff boundaries on that path
-- [x] document which render-plane entry points are in v1 scope vs deferred
-
-### Batch 1.4 - Public Host-Edge Proof And Front-Door Closeout
-
-Status: complete
-
-- [x] extend or add `signal-host-local` public host-edge tests that exercise
-  real bridge backends, not broker metadata-only sessions
-- [x] run `effigy validate` and record the commands actually executed
-- [x] refresh `LocalRuntimeHost` crate docs and architecture front doors
-- [x] close the milestone and name the product-pull gate for `g11.002`
+- Integration contract freeze (docs-only): authority chain, v1 tiers, and
+  non-goals frozen; map at
+  `docs/architecture/production-host-assembly-integration.md`.
+- Bridge backend factory on `LocalRuntimeHost`: host-owned construction for
+  in-process CLAP/VST3/AU/LV2 plus `ShmPluginProcessor` construction bound
+  to existing broker sessions for `DedicatedSandbox`; typed failures for
+  unsupported tiers, layouts, and missing discovery records.
+- Render-plane consumer wiring: at least one offline render-plane plugin
+  stage driven from the host assembly with parameter/event/state handoff
+  boundaries proved.
+- Public host-edge proof and closeout: `signal-host-local` public tests
+  exercise real bridge backends; `LocalRuntimeHost` crate docs and
+  architecture front doors refreshed; milestone closed with the `g11.002`
+  product-pull gate named.
 
 ## Acceptance Criteria
 
@@ -118,22 +85,27 @@ Status: complete
   host code stays orchestration and backend construction only.
 
 - Risk: wiring only one format leaves a false "production ready" story.
-- Mitigation: Batch 1.2 requires all four adapter families before Batch 1.3
-  closes.
+- Mitigation: the factory batch requires all four adapter families.
 
 - Risk: test-only wiring persists without consumer entry points.
-- Mitigation: Batch 1.4 requires public host-edge proof on the same path Batch
-  1.3 uses.
+- Mitigation: the closeout batch requires public host-edge proof on the same
+  path the consumer wiring uses.
 
-## Evidence Requirements
+## Evidence
 
-- [x] one log per completed batch under `docs/logs/2026-08/` or later month
-- [x] Batch 1.1 records the integration map path and bounded Batch 1.2 scope
-- [x] later batches record validation actually run (`effigy validate`, targeted
-  crate tests)
-- [x] milestone closeout updates `docs/roadmaps/g11/README.md`
+- Dispatch handoff: `docs/handoffs/20260817-160800-g11-001-host-assembly-wiring.md`
+  (closed; retained as history, not authority).
+- Batch logs: `docs/logs/2026-08/17-g11-001-batch-1-1-host-assembly-integration-map.md`
+  through `17-g11-001-batch-1-4-host-edge-proof-and-closeout.md`.
+- Validation recorded in the batch logs (`effigy validate`, targeted crate
+  tests).
+
+## Stop Conditions
+
+- planning gaps, contract contradictions, or failed evidence gates stop the
+  task; none remain open.
 
 ## Next Task
 
-`g11.001` closed. Continue at
-`docs/roadmaps/g11/batch-cards/005-g11-002-broker-multiplexing.md`.
+`g11.001` closed. Continued at `g11.002`
+(`docs/roadmaps/g11/002-shared-sandbox-tier.md`).

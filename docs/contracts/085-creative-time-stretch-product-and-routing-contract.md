@@ -2461,7 +2461,7 @@ entered `main`.
 
 ## 2026-07-27 Creative Renders Are Uncacheable
 
-Planning authority: `docs/roadmaps/g10/037-stretch-cache-identity-completeness.md`.
+Planning authority: `docs/roadmaps/archive/g10.md`.
 Evidence: `docs/logs/2026-07/27-g10-037-creative-cache-decision.md`.
 
 `g10.037` audited every input that changes rendered output against Signal's
